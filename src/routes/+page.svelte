@@ -1,6 +1,5 @@
 <script>
+	import Inbox from '$lib/components/inbox/Inbox.svelte'
 </script>
 
-<main>
-        <div>inbox</div>
-</main>
+<Inbox/>
