@@ -6,7 +6,7 @@
 </script>
 
 
-<div>
+<div class="bg-background">
 	<Header/>
 	<div class="flex">
 		<Sidebar/>
