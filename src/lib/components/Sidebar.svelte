@@ -3,18 +3,23 @@
 	import edit from '$lib/assets/edit.svg'
 </script>
 
-<div class="flex flex-col m-2">
+<div class="w-60 flex flex-col m-2">
 	<!-- compose -->
-	<Button 
-		src={edit}
+	<div>
+		<Button 
+			src={edit}
 		alt="pencil icon"
-		text="Compose"
-		style="bg-compose rounded-[12px] px-4 py-4"
-		imgStyle="w-6 mr-3"
-	/>
-
+	text="Compose"
+ type="compose"
+ />
+	</div>
 	<!-- list -->
 	<div>
+		<Button
+			src={edit}
+			alt="inbox icon"
+	 />
+		
 	</div>
 
 	<!-- labels -->
