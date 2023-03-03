@@ -2,6 +2,6 @@
 </script>
 
 
-<div>
+<div class="h-fit">
 	inbox
 </div>

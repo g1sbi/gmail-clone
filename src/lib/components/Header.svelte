@@ -1,6 +1,6 @@
 <script>
 	import Button from '$lib/components/UI/Button.svelte'
-	import icon from '$lib/assets/icon.webp'
+	import icon from '$lib/assets/logo.png'
 	import search from '$lib/assets/search.svg'
 	import menu from '$lib/assets/menu.svg'
 	import filter from '$lib/assets/filter.svg'
@@ -14,18 +14,11 @@
 	<!-- menu and icon -->
 	<div class="flex items-center w-60">
 		<Button src={menu} alt="menu icon"/>
-		<div class="flex items-center">
-			<img 
-				class="w-7 mx-3"
-				src={icon} 
-				alt="gmail icon" 
-			/>
-			<div class="text-2xl">Gmail</div>
-		</div>
+		<Button src={icon} alt="gmail icon" type="gmail"/>
 	</div>
 	<!-- search bar -->
-	<div class="grow relative">
-		<div class="w-[45rem] flex justify-between items-center px-2 py-1 bg-search rounded-lg">
+	<div class="grow-0 md:grow">
+		<div class="lg:w-[45rem] flex justify-between items-center px-2 py-1 bg-search rounded-lg">
 			<Button src={search} alt="search icon"/>
 			<input
 				class="grow bg-search pl-2"

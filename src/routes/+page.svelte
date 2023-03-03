@@ -2,4 +2,6 @@
 	import Inbox from '$lib/components/inbox/Inbox.svelte'
 </script>
 
-<Inbox/>
+<div class="grow bg-white rounded-[14px] px-4 py-2">
+	<Inbox/>
+</div>
