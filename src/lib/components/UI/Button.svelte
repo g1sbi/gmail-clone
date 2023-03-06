@@ -1,4 +1,5 @@
 <script lang="ts">
+	import arrow from '$lib/assets/expand.svg'
 	export let src:string="";
 	export let alt:string="";
 	export let text:string="";
@@ -24,7 +25,7 @@
 			style = "w-10 p-1 rounded-full hover:bg-gray-200"
 			imgStyle = "w-12 rounded-full"
 			break;
-		
+
 		case "list":
 			style = ""
 		break;
@@ -43,7 +44,7 @@
 		break;
 
 		case "send":
-			style="rounded-lg bg-blue-500"
+			style="py-2 pr-5 border-0 border-r-[1px] border-r-black bg-send text-sm text-white font-bold"
 			text="Send"
 			textStyle=""
 			pill=true;
@@ -58,17 +59,24 @@
 
 <div class={pillStyle}>
 	{#if pill}
-		<div class="rounded-l-full bg-blue-500 w-4"></div>
+		<div class="rounded-l-full bg-send w-5 "></div>
 	{/if}
-<button class={style} on:click={onClick}>
-	<img
-	 src={src}
-	 alt={alt}
-	 class={imgStyle}
-	 />
-	 <div class={textStyle}>{text}</div>
-</button>
+	<button class={style} on:click={onClick}>
+		<img
+		src={src}
+		alt={alt}
+		class={imgStyle}
+		/>
+		<div class={textStyle}>{text}</div>
+	</button>
 	{#if pill}
-		<div>pill</div>
+		<div class="rounded-r-full bg-send w-8 ">
+			<img 
+		 src={arrow} 
+		 alt="arrow icon"
+	 	class="w-4 h-4 my-2 mx-1"
+
+	 />
+		</div>
 	{/if}
 </div>

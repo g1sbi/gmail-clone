@@ -2,15 +2,19 @@
 
 	import Button from '$lib/components/UI/Button.svelte'
 	import close from '$lib/assets/close.svg'
-	import fullscreen from '$lib/assets/fullscreen.svg'
-	import minimize from '$lib/assets/minimize.svg'
+	import fullscreen_icon from '$lib/assets/fullscreen.svg'
+	import minimize_icon from '$lib/assets/minimize.svg'
 
 	export let renderCompose;
 
+	//minimize
+	let minimize = false;
 	const handleMinimize = () =>{
-
+		minimize = true;
 	}
 
+	//fullscreen
+	let fullscreen = false;
 	const handleFullscreen = () =>{
 
 	}
@@ -21,19 +25,26 @@
 
 </script>
 
+{#if minimize}
+	<div class="fixed flex flex-col bottom-0 right-0 mr-[4.5rem] w-72 h-10 bg-white border rounded-t-lg drop-shadow-2xl">
+		minimize
+	</div>
+{/if}
+
+{#if !minimize}
 <div class="fixed flex flex-col bottom-0 right-0 mr-[4.5rem] w-[37.5rem] h-[38.5rem] bg-white border rounded-t-lg drop-shadow-2xl">
 	<!-- header -->
 	<div class="flex justify-between items-center py-2 px-4 bg-read">
 		<div class="text-sm font-bold">New Message</div>
 		<div class="flex items-center">
 			<Button 
-				src={minimize}
+				src={minimize_icon}
 				alt="close button"
 				type="new mail"
 				onClick={handleMinimize}
 			/>
 			<Button 
-				src={fullscreen}
+				src={fullscreen_icon}
 				alt="close button"
 				type="new mail"
 				onClick={handleFullscreen}
@@ -63,13 +74,12 @@
 	<!-- footer -->
 	<div class="flex px-4 py-2">
 		<!-- custom pill shaped button -->
-		<div>
-			<div></div>
-		<Button
-			type="send"
-			onClick={handleSend}
-		/>
-		<div></div>
+		<div class="mb-1">
+			<Button
+				type="send"
+				onClick={handleSend}
+			/>
 		</div>
 	</div>
 </div>
+{/if}
