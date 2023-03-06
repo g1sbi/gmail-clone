@@ -9,6 +9,11 @@
 	import draft from '$lib/assets/draft.svg'
 	import expand from '$lib/assets/expand.svg'
 	import add from '$lib/assets/add.svg'
+
+
+	//compose new mail
+	export let renderCompose;
+
 </script>
 
 <div class="w-60 flex flex-col mr-4">
@@ -18,6 +23,7 @@
 			src={edit} 
 			alt="edit icon" 
 			type="compose"
+			onClick={renderCompose}
 		/>
 	</div>
 	<!-- list -->
