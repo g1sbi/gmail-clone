@@ -9,6 +9,6 @@
 		<button >
 			<img src={expand} alt="expand icon" class="w-4"/>
 		</button>
-		<Button src={expand} alt="expand icon" type="list-header"/>
+		<Button src={expand} alt="expand icon" kind="list-header"/>
 	</div>
 </div>

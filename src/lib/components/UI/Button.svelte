@@ -1,35 +1,32 @@
 <script lang="ts">
-	import data from '$lib/buttonStyles.json';
+	import styles from '../../buttonStyles.js';
 	import arrow from '$lib/assets/expand.svg';
 	export let src: string = '';
 	export let alt: string = '';
 	export let text: string = '';
 	export let kind: string = '';
-	export let onClick: () => void = () => {};
+	export let onClick:Function = () => {};
 	export let url: string = '';
 
 	let pill = false;
 
 	//types
-	interface StylesType {
-		button: string;
-		img: string;
-		text: string;
-		pill: boolean;
-		pillStyle: string;
-		style: string;
-		imgStyle: string;
-		textStyle: string;
-		target: string;
+	interface ButtonType {
+		button?: string;
+		img?: string;
+		text?: string;
+		pill?: boolean;
+		pillStyle?: string;
+		style?: string;
+		imgStyle?: string;
+		textStyle?: string;
+		target?: string;
 	}
 
-	interface ButtonType {
-		[key: string]: StylesType;
-		}
-
 	//store button type
-	const buttonStyles: StylesType = data;
+	const buttonStyles: Record<string,ButtonType>= styles;
 	const button: ButtonType = buttonStyles[kind] || buttonStyles.default;
+
 </script>
 
 <a href={url} target={button.target} rel="noreferrer">

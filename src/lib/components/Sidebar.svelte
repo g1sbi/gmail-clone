@@ -1,4 +1,4 @@
-<script>
+<script lang='ts'>
 	import Button from '$lib/components/UI/Button.svelte';
 	import Link from '$lib/components/UI/Link.svelte';
 	import edit from '$lib/assets/edit.svg';
@@ -11,13 +11,13 @@
 	import add from '$lib/assets/add.svg';
 
 	//compose new mail
-	export let renderCompose;
+	export let renderCompose:Function;
 </script>
 
 <div class="w-60 flex flex-col mr-4">
 	<!-- compose -->
 	<div class="m-2">
-		<Button src={edit} alt="edit icon" type="compose" onClick={renderCompose} />
+	<Button src={edit} alt="edit icon" kind="compose" onClick={renderCompose} />
 	</div>
 	<!-- list -->
 	<div class="flex flex-col my-2">
@@ -33,7 +33,7 @@
 	<div class="pl-6 pt-3">
 		<div class="flex justify-between items-center ">
 			<div class="font-bold text-lg">Labels</div>
-			<Button src={add} alt="add icon" type="gmail-links" />
+			<Button src={add} alt="add icon" kind="gmail-links" />
 		</div>
 	</div>
 </div>

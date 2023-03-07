@@ -35,7 +35,7 @@
 				<Button
 					src={minimize_icon}
 					alt="close button"
-					type="new mail"
+					kind="new mail"
 					onClick={() => {
 						minimize = !minimize;
 					}}
@@ -43,12 +43,12 @@
 				<Button
 					src={fullscreen_icon}
 					alt="close button"
-					type="new mail"
+					kind="new mail"
 					onClick={() => {
 						fullscreen = !fullscreen;
 					}}
 				/>
-				<Button src={close} alt="close button" type="new mail" onClick={renderCompose} />
+				<Button src={close} alt="close button" kind="new mail" onClick={renderCompose} />
 			</div>
 		</div>
 		<!-- recipient, subject and body -->
@@ -64,7 +64,7 @@
 		<div class="flex px-4 py-2">
 			<!-- custom pill shaped button -->
 			<div class="mb-1">
-				<Button type="send" onClick={handleSend} />
+				<Button kind="send" onClick={handleSend} />
 			</div>
 		</div>
 	</div>

@@ -1,4 +1,4 @@
-{
+const styles = {
 	"compose": {
 		"button": "flex items-center bg-compose rounded-[14px] px-4 py-4 pr-6 border border-compose hover:shadow-2xl hover:border-gray-300",
 		"img": "w-6 mr-4",
@@ -63,3 +63,5 @@
 		"pillStyle": ""
 	}
 }
+
+export default styles; 
