@@ -13,7 +13,6 @@
 	let pillStyle="";
 
 	switch (type) {
-
 		case "compose":
 			style = "flex items-center bg-compose rounded-[14px] px-4 py-4 pr-6 border border-compose hover:shadow-2xl hover:border-gray-300"
 			imgStyle = "w-6 mr-4"
@@ -40,15 +39,15 @@
 		break;
 
 		case "new mail":
-			style="w-4 "
+			style="w-4 hover:bg-gray-300 "
 		break;
 
 		case "send":
-			style="py-2 pr-5 border-0 border-r-[1px] border-r-black bg-send text-sm text-white font-bold"
+			style="py-2 pr-5 border-0 border-r-[1px] border-r-black bg-send text-sm text-white font-bold hover:bg-blue-500"
 			text="Send"
 			textStyle=""
 			pill=true;
-			pillStyle="flex"
+			pillStyle="flex hover:bg-blue-500"
 		break;
 
 		default:

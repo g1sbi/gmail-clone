@@ -6,11 +6,10 @@
 	import Compose from '$lib/components/UI/Compose.svelte'
 
 	let compose = false
-	console.log(compose)
 </script>
 
 
-<div class="bg-background">
+<div class="relative bg-background">
 	<Header/>
 	<div class="flex">
 		<Sidebar renderCompose={() => { compose = true }}/>
