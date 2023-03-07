@@ -14,7 +14,7 @@
 	<!-- menu and icon -->
 	<div class="flex items-center w-60">
 		<Button src={menu} alt="menu icon" />
-		<Button src={icon} alt="gmail icon" type="gmail" />
+		<Button src={icon} alt="gmail icon" kind="gmail" />
 	</div>
 	<!-- search bar -->
 	<div class="grow-0 md:grow">
@@ -29,6 +29,6 @@
 		<Button src={help} alt="help icon" />
 		<Button src={settings} alt="settings icon" />
 		<Button src={apps} alt="apps icon" />
-		<Button src={undead} alt="user icon" type="user" />
+		<Button src={undead} alt="user icon" kind="user" />
 	</div>
 </div>

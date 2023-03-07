@@ -11,12 +11,12 @@
 	<Button
 		src={calendar}
 		alt="calendar icon"
-		type="google-links"
+		kind="google-links"
 		url="https://calendar.google.com"
 	/>
-	<Button src={keep} alt="keep icon" type="google-links" url="https://keep.google.com" />
-	<Button src={tasks} alt="tasks icon" type="google-links" />
-	<Button src={contacts} alt="contacts icon" type="google-links" />
+	<Button src={keep} alt="keep icon" kind="google-links" url="https://keep.google.com" />
+	<Button src={tasks} alt="tasks icon" kind="google-links" />
+	<Button src={contacts} alt="contacts icon" kind="google-links" />
 	<div class="h-px w-5 bg-gray-200 border-0 " />
-	<Button src={add} alt="add icon" type="google-links" />
+	<Button src={add} alt="add icon" kind="google-links" />
 </div>

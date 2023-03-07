@@ -1,6 +1,5 @@
 <script>
 	import { onMount } from 'svelte'
-	import { go } from '@sveltejs/kit'
 	import '../app.css';
 	import Header from '$lib/components/Header.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
@@ -8,14 +7,7 @@
 	import Compose from '$lib/components/UI/Compose.svelte';
 	import ListHeader from '$lib/components/UI/ListHeader.svelte';
 
-	//render inbox when mounting
-	onMount( () => {
-		if (location.pathname === '/'){
-			go('/inbox')
-		}
-	})
-
-	let compose = false;
+		let compose = false;
 </script>
 
 <div class="relative bg-background">

@@ -5,13 +5,13 @@
 	export let alt: string = '';
 	export let text: string = '';
 	export let kind: string = '';
-	export let onClick:Function = () => {};
+	export let onClick:any = () => {};
 	export let url: string = '';
 
 	let pill = false;
 
-	//types
-	interface ButtonType {
+	//kinds
+	interface Buttonkind {
 		button?: string;
 		img?: string;
 		text?: string;
@@ -23,9 +23,11 @@
 		target?: string;
 	}
 
-	//store button type
-	const buttonStyles: Record<string,ButtonType>= styles;
-	const button: ButtonType = buttonStyles[kind] || buttonStyles.default;
+	//store button kind
+	const buttonStyles: Record<string,Buttonkind>= styles;
+	const button: Buttonkind = buttonStyles[kind] || buttonStyles.default;
+
+	console.log(buttonStyles[kind]);
 
 </script>
 
@@ -34,7 +36,7 @@
 		{#if pill}
 			<div class="rounded-l-full bg-send w-5 " />
 		{/if}
-		<button class={button.style} on:click={onClick}>
+		<button class={button.style} on:click ={onClick} >
 			<img {src} {alt} class={button.imgStyle} />
 			<div class={button.textStyle}>{text}</div>
 		</button>
