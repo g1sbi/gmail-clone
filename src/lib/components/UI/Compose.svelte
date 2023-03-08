@@ -1,15 +1,14 @@
-<script>
+<script lang="ts">
 	import Button from '$lib/components/UI/Button.svelte';
-	import close from '$lib/assets/close.svg';
-	import fullscreen_icon from '$lib/assets/fullscreen.svg';
-	import minimize_icon from '$lib/assets/minimize.svg';
 
-	export let renderCompose;
+	export let renderCompose: Function;
 
 	//window size variables
 	let minimize = false;
 	let fullscreen = false;
 
+	//variable to conditionally render contacts
+	let contacts = false;
 	//store mail to send
 	let mail = '';
 
@@ -24,36 +23,48 @@
 	}`}
 >
 	<div
-		class={`z-10 flex flex-col bg-white border rounded-t-lg drop-shadow-2xl ${
+		class={`z-10 flex flex-col bg-white border rounded-t-lg drop-2shadow-2xl ${
 			minimize ? 'w-72 h-10' : 'w-[37.5rem] h-[38.5rem]'
-		} ${fullscreen ? 'relative w-[100rem] h-[52rem]' : 'fixed bottom-0 right-0 mr-[4.5rem]'}`}
+		} ${fullscreen ? 'relative w-[84%] h-[92%]' : 'fixed bottom-0 right-0 mr-[4.5rem]'}`}
 	>
 		<!-- header -->
 		<div class="flex justify-between items-center py-2 px-4 bg-read rounded-t-lg">
 			<div class="text-sm font-bold">New Message</div>
 			<div class="flex items-center">
 				<Button
-					src={minimize_icon}
-					alt="close button"
-					kind="new mail"
+					icon="minimize"
+					kind="list-header"
 					onClick={() => {
 						minimize = !minimize;
 					}}
 				/>
 				<Button
-					src={fullscreen_icon}
-					alt="close button"
-					kind="new mail"
+					icon="open_in_full"
+					kind="list-header"
 					onClick={() => {
 						fullscreen = !fullscreen;
 					}}
 				/>
-				<Button src={close} alt="close button" kind="new mail" onClick={renderCompose} />
+				<Button icon="close" kind="list-header" onClick={renderCompose} />
 			</div>
 		</div>
 		<!-- recipient, subject and body -->
 		<div class="grow flex flex-col px-4 py-1 text-sm">
-			<input class="w-full py-2 outline-none border-b" placeholder="Recipient" />
+			<div class="flex items-center">
+				{#if contacts}
+					<Button text="To" />
+				{/if}
+				<input
+					class="w-full py-2 outline-none border-b"
+					placeholder="Recipients"
+					on:click={() => {
+						contacts = !contacts;
+					}}
+					on:blur={() => {
+						contacts = !contacts;
+					}}
+				/>
+			</div>
 			<input class="w-full py-2 outline-none border-b" placeholder="Subject" />
 			<textarea
 				bind:value={mail}
@@ -61,11 +72,14 @@
 			/>
 		</div>
 		<!-- footer -->
-		<div class="flex px-4 py-2">
+		<div class="flex justify-between items-center px-3 py-3">
 			<!-- custom pill shaped button -->
-			<div class="mb-1">
-				<Button kind="send" onClick={handleSend} />
+			<div class="flex items-center">
+				<Button kind="send" text="Send" onClick={handleSend} />
+				<Button icon="attach_file" kind="list-header" onClick={handleSend} />
 			</div>
+			<Button icon="delete" kind="list-header" />
 		</div>
 	</div>
 </div>
+

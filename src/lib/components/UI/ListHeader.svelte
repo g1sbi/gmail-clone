@@ -1,14 +1,14 @@
-<script>
+<script lang="ts">
 	import Button from '$lib/components/UI/Button.svelte';
-	import expand from '$lib/assets/expand.svg';
+
+	export let type="inbox";
 </script>
 
 <div class="flex items-center">
 	<div class="flex items-center hover:bg-gray-300">
 		<input type="checkbox" />
-		<button >
-			<img src={expand} alt="expand icon" class="w-4"/>
-		</button>
-		<Button src={expand} alt="expand icon" kind="list-header"/>
+		<Button icon="arrow_drop_down" kind="list-header"/>
 	</div>
+	<Button icon="refresh" kind="list-header"/>
+	<Button icon="more_vert" kind="list-header"/>
 </div>

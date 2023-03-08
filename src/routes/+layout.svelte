@@ -1,13 +1,11 @@
 <script>
-	import { onMount } from 'svelte'
 	import '../app.css';
 	import Header from '$lib/components/Header.svelte';
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import Apps from '$lib/components/Apps.svelte';
 	import Compose from '$lib/components/UI/Compose.svelte';
-	import ListHeader from '$lib/components/UI/ListHeader.svelte';
 
-		let compose = false;
+	let compose = false;
 </script>
 
 <div class="relative bg-background">
@@ -19,8 +17,7 @@
 			}}
 		/>
 		<div class="w-full grow bg-white rounded-[14px] px-4 py-2">
-			<ListHeader />
-			<slot />
+			<slot/>
 		</div>
 		<Apps />
 	</div>

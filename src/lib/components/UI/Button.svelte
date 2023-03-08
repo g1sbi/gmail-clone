@@ -1,49 +1,54 @@
 <script lang="ts">
 	import styles from '../../buttonStyles.js';
-	import arrow from '$lib/assets/expand.svg';
 	export let src: string = '';
+	export let icon: string = '';
 	export let alt: string = '';
 	export let text: string = '';
 	export let kind: string = '';
-	export let onClick:any = () => {};
+	export let onClick: any = () => {};
 	export let url: string = '';
-
-	let pill = false;
 
 	//kinds
 	interface Buttonkind {
-		button?: string;
-		img?: string;
-		text?: string;
-		pill?: boolean;
-		pillStyle?: string;
+		tag?: string;
 		style?: string;
 		imgStyle?: string;
+		iconStyle?: string;
 		textStyle?: string;
-		target?: string;
+		linkStyle?: string;
 	}
 
 	//store button kind
-	const buttonStyles: Record<string,Buttonkind>= styles;
+	const buttonStyles: Record<string, Buttonkind> = styles;
 	const button: Buttonkind = buttonStyles[kind] || buttonStyles.default;
-
-	console.log(buttonStyles[kind]);
 
 </script>
 
-<a href={url} target={button.target} rel="noreferrer">
-	<div class={button.pillStyle}>
-		{#if pill}
-			<div class="rounded-l-full bg-send w-5 " />
-		{/if}
-		<button class={button.style} on:click ={onClick} >
+{#if button.tag === "button"}
+	<a href={url}  rel="noreferrer" class={button.linkStyle}>
+		<button class={button.style} on:click={onClick}>
 			<img {src} {alt} class={button.imgStyle} />
+			<span class={`material-symbols-outlined ${button.iconStyle}`}>{icon}</span>
 			<div class={button.textStyle}>{text}</div>
 		</button>
-		{#if pill}
-			<div class="rounded-r-full bg-send w-8 ">
-				<img src={arrow} alt="arrow icon" class="w-4 h-4 my-2 mx-1" />
-			</div>
-		{/if}
-	</div>
-</a>
+	</a>
+{/if}
+
+{#if button.tag === "link"}
+	<button class={button.style} on:click={onClick}>
+			<img {src} {alt} class={button.imgStyle} />
+			<span class={`material-symbols-outlined ${button.iconStyle}`}>{icon}</span>
+			<div class={button.textStyle}>{text}</div>
+		</button>
+	{/if}
+
+{#if button.tag === "pill"}
+	<button class={button.style} on:click={onClick}>
+		<div class="rounded-l-full bg-send w-5" />
+		<div class={button.textStyle}>{text}</div>
+		<div class="rounded-r-full bg-send w-8 px-1 pt-2 ">
+			<span class="material-symbols-outlined white">arrow_drop_down</span>
+		</div>
+	</button>
+{/if}
+
