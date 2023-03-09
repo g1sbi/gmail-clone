@@ -9,7 +9,7 @@
 	export let url: string = '';
 
 	//kinds
-	interface Buttonkind {
+	interface ButtonKind {
 		tag?: string;
 		style?: string;
 		imgStyle?: string;
@@ -19,30 +19,31 @@
 	}
 
 	//store button kind
-	const buttonStyles: Record<string, Buttonkind> = styles;
-	const button: Buttonkind = buttonStyles[kind] || buttonStyles.default;
-
+	const buttonStyles: Record<string, ButtonKind> = styles;
+	const button: ButtonKind = buttonStyles[kind] || buttonStyles.default;
 </script>
 
-{#if button.tag === "button"}
-	<a href={url}  rel="noreferrer" class={button.linkStyle}>
-		<button class={button.style} on:click={onClick}>
+{#if button.tag === 'link'}
+	<a href={url} rel="noreferrer" class={button.linkStyle}>
 			<img {src} {alt} class={button.imgStyle} />
+			<div class="flex flex-col justify-center items-center">
 			<span class={`material-symbols-outlined ${button.iconStyle}`}>{icon}</span>
+			</div>
 			<div class={button.textStyle}>{text}</div>
-		</button>
 	</a>
 {/if}
 
-{#if button.tag === "link"}
+{#if button.tag === 'button'}
 	<button class={button.style} on:click={onClick}>
-			<img {src} {alt} class={button.imgStyle} />
+		<img {src} {alt} class={button.imgStyle} />
+		<div class="flex flex-col justify-center items-center">
 			<span class={`material-symbols-outlined ${button.iconStyle}`}>{icon}</span>
-			<div class={button.textStyle}>{text}</div>
-		</button>
-	{/if}
+		</div>
+		<div class={button.textStyle}>{text}</div>
+	</button>
+{/if}
 
-{#if button.tag === "pill"}
+{#if button.tag === 'pill'}
 	<button class={button.style} on:click={onClick}>
 		<div class="rounded-l-full bg-send w-5" />
 		<div class={button.textStyle}>{text}</div>
@@ -51,4 +52,3 @@
 		</div>
 	</button>
 {/if}
-

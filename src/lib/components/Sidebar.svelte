@@ -7,7 +7,9 @@
 
 <div class="w-72 flex flex-col mr-4">
 	<!-- compose -->
-	<Button icon="edit" kind="compose" text="Compose" onClick={renderCompose} />
+	<div>
+		<Button icon="edit" kind="compose" text="Compose" onClick={renderCompose} />
+	</div>
 	<!-- list -->
 	<div class="flex flex-col my-2">
 		<Button icon="inbox" kind="links" text="Inbox" url="/" />
@@ -21,7 +23,7 @@
 	<!-- labels -->
 	<div class="pl-6 pt-3">
 		<div class="flex justify-between items-center ">
-			<div class="font-bold text-lg">Labels</div>
+			<div class="text-lg">Labels</div>
 			<Button icon="add" kind="gmail-links" />
 		</div>
 	</div>

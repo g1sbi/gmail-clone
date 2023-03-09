@@ -6,7 +6,7 @@
 	import Button from '$lib/components/UI/Button.svelte';
 </script>
 
-<div class="w-16 ml-1 mt-3 flex flex-col items-center">
+<div class="w-16 ml-1 flex flex-col items-center">
 	<div class="h-56 flex flex-col justify-around items-center ">
 		<Button
 			src={calendar}
@@ -18,8 +18,8 @@
 		<Button src={tasks} alt="tasks icon" kind="google-links" />
 		<Button src={contacts} alt="contacts icon" kind="google-links" />
 	</div>
-	<div class="mt-1 h-px w-5 bg-gray-200 border-0 " />
-	<div class="mt-7">
+	<div class="mt-4 h-px w-5 bg-gray-200 border-0 " />
+	<div class="mt-6">
 	<Button icon="add" kind="google-links" />
 	</div>
 </div>

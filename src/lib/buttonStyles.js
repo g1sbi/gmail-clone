@@ -6,7 +6,7 @@ const styles = {
 		"tag": "button" ,
 	},
 	"user": {
-		"style": "w-10 h-10 p-1 ml-1 rounded-full hover:bg-gray-200",
+		"style": "w-10 h-10 p-1 ml-1 rounded-full hover:bg-gray-300",
 		"imgStyle": "w-12 rounded-full",
 		"tag": "button"
 	},
@@ -14,19 +14,18 @@ const styles = {
 		"tag": "button"
 	},
 	"google-links": {
-		"style": "w-[40px] h-[40px] rounded-full hover:bg-gray-200",
-		"imgStyle": "w-5 m-auto",
+		"linkStyle": "flex flex-col justify-center w-[40px] h-[40px] rounded-full hover:bg-gray-200",
+		"imgStyle": "w-5 mx-auto",
 		"iconStyle": "black",
 		"tag": "link"
 	},
 	"gmail": {
-		"linkStyle": "h-10",
-		"style": "h-10 px-2",
+		"linkStyle": "h-10 pl-2",
 		"imgStyle": "h-10",
 		"tag": "link"
 	},
 	"new mail": {
-		"style": "w-4 hover:bg-gray-300 ",
+		"style": "w-4 hover:bg-gray-200 ",
 		"tag": "button"
 	},
 	"send": {
@@ -35,15 +34,19 @@ const styles = {
 		"tag": "pill"
 	},
 	"list-header": {
-		"style": "hover:bg-gray-200 p-1 mx-1 rounded-md",
+		"style": "hover:bg-gray-200 p-1 rounded-full",
 		"iconStyle": "sidebar-transform",
 		"tag": "button"
 	},
 	"links": {
-		"style": "w-full flex hover:bg-gray-200 focus-within:bg-link active:bg-link pl-6 py-1 rounded-r-full",
+		"linkStyle": "w-full flex hover:bg-gray-200 focus-within:bg-link active:bg-link pl-6 py-1 rounded-r-full",
 		"iconStyle": "black sidebar-transform",
 		"textStyle": "focus:font-bold pl-4",
 		"tag": "link"
+	},
+	"search": {
+		"style": "p-2 rounded-full hover:bg-gray-200",
+		"tag": "button",
 	},
 	"default": {
 		"tag": "button"
