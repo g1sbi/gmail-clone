@@ -3,7 +3,6 @@
 	export let src: string = '';
 	export let icon: string = '';
 	export let alt: string = '';
-	export let text: string = '';
 	export let kind: string = '';
 	export let onClick: any = () => {};
 	export let url: string = '';
@@ -29,7 +28,7 @@
 			<div class="flex flex-col justify-center items-center">
 			<span class={`material-symbols-outlined ${button.iconStyle}`}>{icon}</span>
 			</div>
-			<div class={button.textStyle}>{text}</div>
+			<div class={button.textStyle}><slot/></div>
 	</a>
 {/if}
 
@@ -39,14 +38,14 @@
 		<div class="flex flex-col justify-center items-center">
 			<span class={`material-symbols-outlined ${button.iconStyle}`}>{icon}</span>
 		</div>
-		<div class={button.textStyle}>{text}</div>
+		<div class={button.textStyle}><slot/></div>
 	</button>
 {/if}
 
 {#if button.tag === 'pill'}
 	<button class={button.style} on:click={onClick}>
 		<div class="rounded-l-full bg-send w-5" />
-		<div class={button.textStyle}>{text}</div>
+		<div class={button.textStyle}><slot/></div>
 		<div class="rounded-r-full bg-send w-8 px-1 pt-2 ">
 			<span class="material-symbols-outlined white">arrow_drop_down</span>
 		</div>

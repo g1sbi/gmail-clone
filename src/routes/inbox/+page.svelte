@@ -4,7 +4,7 @@
 
 </script>
 
-<div>
+<div class="">
 	<ListHeader type="inbox"/>
 	<List type="inbox"/>
 </div>

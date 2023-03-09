@@ -23,6 +23,10 @@ body{
   color: #FFF;
 }
 
+.gray {
+  color: #A1A1A1;
+}
+
 .sidebar-transform {
   transform: scale(0.7);
 }

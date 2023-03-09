@@ -48,6 +48,15 @@ const styles = {
 		"style": "p-2 rounded-full hover:bg-gray-200",
 		"tag": "button",
 	},
+	"mail": {
+		"linkStyle": "border-0 hover:border-gray-800 hover:shadow-2xl",
+		"tag": "link",
+	},
+	"mail-button": {
+		"style": "p-2 rounded-full hover:bg-gray-200",
+		"iconStyle": "gray sidebar-transform",
+		"tag": "button",
+	},
 	"default": {
 		"tag": "button"
 	}

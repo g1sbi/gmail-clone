@@ -8,16 +8,16 @@
 <div class="w-72 flex flex-col mr-4">
 	<!-- compose -->
 	<div>
-		<Button icon="edit" kind="compose" text="Compose" onClick={renderCompose} />
+		<Button icon="edit" kind="compose" onClick={renderCompose}>Compose</Button>
 	</div>
 	<!-- list -->
 	<div class="flex flex-col my-2">
-		<Button icon="inbox" kind="links" text="Inbox" url="/" />
-		<Button icon="star" kind="links" text="Starred" url="/starred" />
-		<Button icon="schedule" kind="links" text="Snoozed" />
-		<Button icon="send" kind="links" text="Sent" url="/sent" />
-		<Button icon="draft" kind="links" text="Drafts" url="/drafts" />
-		<Button icon="expand_more" kind="links" text="More" />
+		<Button icon="inbox" kind="links" url="/">Inbox</Button>
+		<Button icon="star" kind="links" url="/starred">Starred</Button>
+		<Button icon="schedule" kind="links">Snoozed</Button>
+		<Button icon="send" kind="links" url="/sent">Sent</Button>
+		<Button icon="draft" kind="links" url="/drafts">Drafts</Button>
+		<Button icon="expand_more" kind="links">More</Button>
 	</div>
 
 	<!-- labels -->
