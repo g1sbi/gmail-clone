@@ -9,10 +9,11 @@
 
 	//variable to conditionally render contacts
 	let contacts = false;
-	//store mail to send
-	let mail = '';
 
-	const handleSend = () => {};
+		
+	export let mail;
+	const handleSend = () => {console.log(mail)};
+
 </script>
 
 <div
@@ -57,6 +58,7 @@
 				<input
 					class="w-full py-2 outline-none border-b"
 					placeholder="Recipients"
+		 bind:value={mail.to}
 					on:click={() => {
 						contacts = !contacts;
 					}}
@@ -65,9 +67,9 @@
 					}}
 				/>
 			</div>
-			<input class="w-full py-2 outline-none border-b" placeholder="Subject" />
+			<input class="w-full py-2 outline-none border-b" placeholder="Subject" bind:value={mail.subject} />
 			<textarea
-				bind:value={mail}
+				bind:value={mail.body}
 				class="grow outline-none w-full overflow-y-auto resize-none py-2"
 			/>
 		</div>
