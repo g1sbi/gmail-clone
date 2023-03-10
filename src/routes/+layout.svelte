@@ -33,7 +33,7 @@
 				compose = true;
 			}}
 		/>
-		<div class="w-full grow bg-white rounded-[14px] py-2">
+		<div class="min-w-0 w-full bg-white rounded-[14px] py-2 ">
 			<slot/>
 		</div>
 		<Apps />

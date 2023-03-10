@@ -5,7 +5,7 @@
 	export let renderCompose: Function;
 </script>
 
-<div class="w-72 flex flex-col mr-4">
+<div class="min-w-[240px] w-[240px] flex flex-col mr-4 ">
 	<!-- compose -->
 	<div>
 		<Button icon="edit" kind="compose" onClick={renderCompose}>Compose</Button>
@@ -19,7 +19,6 @@
 		<Button icon="draft" kind="links" url="/drafts">Drafts</Button>
 		<Button icon="expand_more" kind="links">More</Button>
 	</div>
-
 	<!-- labels -->
 	<div class="pl-6 pt-3">
 		<div class="flex justify-between items-center ">

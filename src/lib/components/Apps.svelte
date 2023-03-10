@@ -6,7 +6,7 @@
 	import Button from '$lib/components/UI/Button.svelte';
 </script>
 
-<div class="w-16 ml-1 flex flex-col items-center">
+<div class="min-w-[40px] w-[40px] ml-1 flex flex-col items-center">
 	<div class="h-56 flex flex-col justify-around items-center ">
 		<Button
 			src={calendar}

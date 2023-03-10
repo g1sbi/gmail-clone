@@ -32,14 +32,14 @@
 
 </script>
 
-<div class="h-[52rem] pt-2 text-sm overflow-y-auto">
+<div class="h-[90vh] pt-2 text-sm overflow-y-auto">
 	{#each mailArray as mail}
 		<Button kind="mail">
 		<div
-			class={`px-3 flex justify-between items-center border-b-[1px] hover:drop-shadow-mail ${!mail.read ? 'bg-white' : 'bg-read'}`}
+			class={`px-3 flex justify-between items-center border-b-[1px] hover:drop-shadow-mail whitespace-nowrap ${!mail.read ? 'bg-white' : 'bg-read'}`}
 		>
 			<!-- checkbox, star and sender -->
-			<div class="w-[16.5rem] flex items-center ">
+			<div class="min-w-[16.5rem] flex items-center ">
 				<Button kind="mail-button">
 				<input type="checkbox" class=""/>
 				</Button>
@@ -47,13 +47,13 @@
 				<div class={`${!mail.read ? 'font-bold' : ''}`}>{mail.sender}</div>
 			</div>
 			<!-- subject -->
-			<div class="max-w-[72rem] grow flex truncate">
+			<div class="min-w-0 max-w-[72rem] flex mr-auto">
 				<div class={`${!mail.read ? 'font-bold text-md' : ''}`}>{mail.subject}</div>
 				<div class="mx-1">-</div>
-				<div class="text-gray-500">{mail.body}</div>
+				<div class="text-gray-500 truncate">{mail.body}</div>
 			</div>
 			<!-- time/date -->
-			<div class={`w-10 ml-16 text-right text-xs ${!mail.read ? 'font-bold' : ''}`}>{mail.date}</div>
+			<div class={`min-w-10 w-10 ml-16 text-right text-xs ${!mail.read ? 'font-bold' : ''}`}>{mail.date}</div>
 		</div>
 		</Button>
 	{/each}

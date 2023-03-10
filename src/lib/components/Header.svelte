@@ -6,20 +6,18 @@
 
 <div class="bg-background flex items-center mx-4 my-2">
 	<!-- menu and icon -->
-	<div class="flex items-center w-60">
+	<div class="flex items-center min-w-[240px]">
 		<Button icon="menu" kind="search" />
 		<Button src={icon} alt="gmail icon" kind="gmail" url="/inbox"/>
 	</div>
 	<!-- search bar -->
-	<div class="grow-0 md:grow" >
 		<div class="lg:w-[45rem] flex justify-between items-center px-3 py-1 bg-search rounded-lg">
 			<Button icon="search" kind="search" />
 			<input class="grow bg-search pl-2" placeholder="Search mail" />
 			<Button icon="tune" kind="search" />
 		</div>
-	</div>
 	<!-- user -->
-	<div class="flex items-center justify-around w-44">
+	<div class="flex items-center justify-around w-44 ml-auto">
 		<Button icon="help" kind="search"/>
 		<Button icon="settings" kind="search"/>
 		<Button icon="apps" kind="search"/>

@@ -5,6 +5,6 @@
 </script>
 
 <div class="">
-	<ListHeader type="inbox"/>
-	<List type="inbox"/>
+	<ListHeader />
+	<List />
 </div>
