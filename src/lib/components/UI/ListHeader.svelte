@@ -1,8 +1,6 @@
 <script lang="ts">
 	import Button from '$lib/components/UI/Button.svelte';
 
-	export let type = 'inbox';
-
 	let sort = '40';
 </script>
 
@@ -18,7 +16,7 @@
 		<Button icon="more_vert" kind="list-header" />
 	</div>
 	<div class="flex">
-		<Button text={sort} kind="list-header" />
+		<Button kind="list-header">{sort}</Button>
 		<Button icon="chevron_left" kind="list-header"/>
 		<Button icon="chevron_right" kind="list-header"/>
 		<div class="flex">

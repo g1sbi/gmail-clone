@@ -5,7 +5,7 @@
 	export let renderCompose: Function;
 </script>
 
-<div class="w-72 flex flex-col mr-4">
+<div class="flex flex-col mr-4">
 	<!-- compose -->
 	<div>
 		<Button icon="edit" kind="compose" onClick={renderCompose}>Compose</Button>

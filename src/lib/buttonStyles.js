@@ -1,8 +1,8 @@
 const styles = {
 	"compose": {
-		"style": "flex items-center bg-compose rounded-[16px] pl-4 pr-6 py-[0.9rem] mx-2 my-2 border border-compose hover:shadow-2xl hover:border-gray-300",
+		"style": "flex items-center bg-compose rounded-[16px] pl-4 pr-6 py-[0.9rem] mx-2 my-2 border border-compose hover:drop-shadow-compose hover:border-[#ccc]",
 		"iconStyle": "black",
-		"textStyle": "text-sm font-bold pl-4",
+		"textStyle": "text-sm  pl-4",
 		"tag": "button" ,
 	},
 	"user": {
@@ -34,14 +34,14 @@ const styles = {
 		"tag": "pill"
 	},
 	"list-header": {
-		"style": "hover:bg-gray-200 p-1 rounded-full",
+		"style": "hover:bg-gray-200 p-1 rounded-full font-bold text-xs text-gray-500",
 		"iconStyle": "sidebar-transform",
 		"tag": "button"
 	},
 	"links": {
-		"linkStyle": "w-full flex hover:bg-gray-200 focus-within:bg-link active:bg-link pl-6 py-1 rounded-r-full",
+		"linkStyle": "w-full flex items-center hover:bg-gray-200 focus-within:bg-link active:bg-link pl-6 py-1 rounded-r-full",
 		"iconStyle": "black sidebar-transform",
-		"textStyle": "focus:font-bold pl-4",
+		"textStyle": "text-sm focus:font-bold pt-1 pl-4",
 		"tag": "link"
 	},
 	"search": {
@@ -49,11 +49,11 @@ const styles = {
 		"tag": "button",
 	},
 	"mail": {
-		"linkStyle": "border-0 hover:border-gray-800 hover:shadow-2xl",
+		"linkStyle": "hover:border-gray-800 hover:shadow-2xl",
 		"tag": "link",
 	},
 	"mail-button": {
-		"style": "p-2 rounded-full hover:bg-gray-200",
+		"style": "p-2 mx-[-0.1rem] rounded-full hover:bg-gray-200",
 		"iconStyle": "gray sidebar-transform",
 		"tag": "button",
 	},
