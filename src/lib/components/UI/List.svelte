@@ -10,7 +10,6 @@
 		isStarred = true;
 	};
 
-	console.log(isStarred)
 	//types
 	interface Mail {
 		id: number;
@@ -40,7 +39,7 @@
 			class={`px-3 flex justify-between items-center border-b-[1px] hover:drop-shadow-mail ${!mail.read ? 'bg-white' : 'bg-read'}`}
 		>
 			<!-- checkbox, star and sender -->
-			<div class="w-[16.5rem] flex items-center">
+			<div class="w-[16.5rem] flex items-center ">
 				<Button kind="mail-button">
 				<input type="checkbox" class=""/>
 				</Button>
