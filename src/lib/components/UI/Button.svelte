@@ -23,7 +23,7 @@
 </script>
 
 {#if button.tag === 'link'}
-	<a href={url} rel="noreferrer" class={button.linkStyle}>
+	<a href={url} rel="noreferrer" class={button.linkStyle} on:click={onClick}>
 			<img {src} {alt} class={button.imgStyle} />
 			<div class="flex flex-col justify-center items-center">
 			<span class={`material-symbols-outlined ${button.iconStyle}`}>{icon}</span>

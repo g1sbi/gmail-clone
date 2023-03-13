@@ -6,4 +6,5 @@
 	onMount(() => {
 		goto('/inbox', { keepFocus:true });
 	});
+
 </script>

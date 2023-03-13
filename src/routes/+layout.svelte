@@ -20,8 +20,6 @@
 		attachment: ''
 	}
 
-	console.log(mail)
-
 	let compose = false;
 </script>
 

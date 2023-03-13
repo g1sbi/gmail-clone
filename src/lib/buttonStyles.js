@@ -30,7 +30,7 @@ const styles = {
 	},
 	"send": {
 		"style": "flex text-sm text-white font-bold hover:bg-blue-500",
-		"textStyle": "pr-2 py-2 bg-send border-0 border-r[1px] border-r-black",
+		"textStyle": "pr-2 py-2 bg-send border-0 border-r-[1px] border-r-black",
 		"tag": "pill"
 	},
 	"list-header": {
@@ -53,9 +53,19 @@ const styles = {
 		"tag": "link",
 	},
 	"mail-button": {
-		"style": "p-2 mx-[-0.1rem] rounded-full hover:bg-gray-200",
+		"style": "p-2 mx-[-0.2rem] rounded-full hover:bg-gray-200",
 		"iconStyle": "gray sidebar-transform",
 		"tag": "button",
+	},
+	"mail-star-empty": {
+		"style": "p-2 mx-[-0.1rem] rounded-full hover:bg-gray-200",
+		"iconStyle": "star-empty",
+		"tag": "button"
+	},
+	"mail-star-filled": {
+		"style": "p-2 mx-[-0.1rem] rounded-full hover:bg-gray-200",
+		"iconStyle": "star-filled",
+		"tag": "button"
 	},
 	"default": {
 		"tag": "button"

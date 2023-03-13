@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Button from '$lib/components/UI/Button.svelte';
+	import type Mail from '$lib/components/UI/List.svelte'
 
 	export let renderCompose: Function;
 
@@ -11,7 +12,8 @@
 	let contacts = false;
 
 		
-	export let mail;
+	export let mail:Mail;
+
 	const handleSend = () => {console.log(mail)};
 
 </script>
@@ -77,7 +79,7 @@
 		<div class="flex justify-between items-center px-3 py-3">
 			<!-- custom pill shaped button -->
 			<div class="flex items-center">
-				<Button kind="send" text="Send" onClick={handleSend} />
+				<Button kind="send" onClick={handleSend}>Send</Button>
 				<Button icon="attach_file" kind="list-header" onClick={handleSend} />
 			</div>
 			<Button icon="delete" kind="list-header" />

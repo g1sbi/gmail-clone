@@ -28,6 +28,26 @@ body{
   color: #A1A1A1;
 }
 
+.star-empty {
+  color: #CCCDD2;
+  transform: scale(0.7);
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 600,
+  'GRAD' 0,
+  'opsz' 48 
+}
+
+.star-filled {
+  color: #FDC34F;
+  transform: scale(0.7);
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 600,
+  'GRAD' 0,
+  'opsz' 48 
+}
+
 .sidebar-transform {
   transform: scale(0.7);
 }
